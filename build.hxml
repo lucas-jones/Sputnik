@@ -1,0 +1,9 @@
+-cp src
+-cp libs
+
+-lib compiletime
+-lib nodehx
+
+-js bin/sputnik.js
+
+-main sputnik.App
