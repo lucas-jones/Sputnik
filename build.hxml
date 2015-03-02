@@ -6,4 +6,4 @@
 
 -js bin/sputnik.js
 
--main sputnik.App
+-main sputnik.Sputnik
