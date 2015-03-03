@@ -46,3 +46,36 @@ class Report
 		});
 	}
 }
+
+class Fleet
+{
+	public var uid:Int;
+	public var puid:Int; // player uid?
+	public var l:Int;
+	public var o:Array<Array<Int>>;
+	public var o:Array<Int>;
+	public var name:String; // n
+
+	public var w:Int;
+	public var x:Float;
+	public var y:Float;
+
+	public var st:Int;
+
+	public var lx:Float;
+	public var ly:Float;
+
+	public function new()
+	{
+
+	}
+
+	public static function fromDynamic(data:Dynamic):Fleet
+	{
+		var fleet = new Fleet();
+
+		
+
+		return fleet;
+	}
+}
