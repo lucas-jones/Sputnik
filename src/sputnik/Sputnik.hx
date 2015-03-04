@@ -35,6 +35,30 @@ class Sputnik
 		{
 			var report:Report = Report.fromDynamic(cast Json.parse(a.body).report);
 
+			// for(player in report.players)
+			// {
+			// 	trace(player.name + " " + player.stars + " " + player.technology.banking.level);
+			// }
+			
+			var path = [];
+
+			for(fleet in report.fleets)
+			{
+				if(fleet.name == "Alkurah VIII")
+				{
+					for(waypoint in fleet.waypoint)
+					{
+						var star:Star = report.stars.find(function(star):Bool
+						{
+							return star.uid == waypoint[1];
+						});
+
+						path.push(star.name);
+					}
+
+					trace(path.join(" -> "));
+				}
+			}
 			trace('Game: ${report.name}');
 			trace('Player: ${report.current.name}');
 		});
